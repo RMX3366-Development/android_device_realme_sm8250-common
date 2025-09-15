@@ -123,6 +123,11 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+ifneq ($(TARGET_AB_DEVICE),true)
+BOARD_CACHEIMAGE_PARTITION_SIZE := 536870912
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+endif
+
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
