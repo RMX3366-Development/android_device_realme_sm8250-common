@@ -43,33 +43,42 @@ void vendor_load_properties() {
     switch (prjname) {
         case 19795: // bladerunner CN
             OverrideProperty("ro.product.product.model", "RMX2071");
+            OverrideProperty("ro.product.product.device", "RMX2071CN");
             break;
         case 20607: // bladerunner_48m CN
             OverrideProperty("ro.product.product.model", "RMX2072");
+            OverrideProperty("ro.product.product.device", "RMX2072CN");
             break;
         case 19705: // bladerunner EU
             OverrideProperty("ro.product.product.model", "RMX2075");
+            OverrideProperty("ro.product.product.device", "RMX2075L1");
             break;
         case 19706: // bladerunner IN
             OverrideProperty("ro.product.product.model", "RMX2076");
+            OverrideProperty("ro.product.product.device", "RMX2076L1");
             break;
         case 21615: // rivena CN
             OverrideProperty("ro.product.product.model", "RMX3366");
+            OverrideProperty("ro.product.product.device", "RE546F");
             break;
         case 21619: // bitra CN
         case 136730: // bitra CN (Dragon Ball Edition)
             OverrideProperty("ro.product.product.model", "RMX3370");
+            OverrideProperty("ro.product.product.device", "RE5473");
             break;
         case 136858: // bitra IN
         case 136859: // bitra EU
             OverrideProperty("ro.product.product.model", "RMX3370");
+            OverrideProperty("ro.product.product.device", "RE879AL1");
             break;
         case 21623: // spartan CN
             OverrideProperty("ro.product.product.model", "RMX3372");
+            OverrideProperty("ro.product.product.device", "RE5477");
             break;
         case 21732: // spartan IN
         case 21733: // spartan EU
             OverrideProperty("ro.product.product.model", "RMX3371");
+            OverrideProperty("ro.product.product.device", "RE54E4L1");
             break;
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
