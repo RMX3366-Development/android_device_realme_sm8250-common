@@ -3,3 +3,45 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+
+# bladerunner
+on property:ro.boot.prjname=19795
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=19705
+    setprop ro.boot.hardware.revision "EU"
+
+on property:ro.boot.prjname=19706
+    setprop ro.boot.hardware.revision "IN"
+
+# bladerunner_48m
+on property:ro.boot.prjname=20607
+    setprop ro.boot.hardware.revision "CN"
+
+# rivena
+on property:ro.boot.prjname=21615
+    setprop ro.boot.hardware.revision "CN"
+
+# bitra
+on property:ro.boot.prjname=21619
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=136730
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=136859
+    setprop ro.boot.hardware.revision "EU"
+
+on property:ro.boot.prjname=136858
+    setprop ro.boot.hardware.revision "IN"
+
+# spartan
+on property:ro.boot.prjname=21623
+    setprop ro.boot.hardware.revision "CN"
+
+on property:ro.boot.prjname=21733
+    setprop ro.boot.hardware.revision "EU"
+
+on property:ro.boot.prjname=21732
+    setprop ro.boot.hardware.revision "IN"
+
