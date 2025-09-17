@@ -44,41 +44,54 @@ void vendor_load_properties() {
         case 19795: // bladerunner CN
             OverrideProperty("ro.product.product.model", "RMX2071");
             OverrideProperty("ro.product.product.device", "RMX2071CN");
+            OverrideProperty("ro.product.marketname", "realme X50 Pro");
             break;
         case 20607: // bladerunner_48m CN
             OverrideProperty("ro.product.product.model", "RMX2072");
             OverrideProperty("ro.product.product.device", "RMX2072CN");
+            OverrideProperty("ro.product.marketname", "realme X50 Pro Player Edition");
             break;
         case 19705: // bladerunner EU
             OverrideProperty("ro.product.product.model", "RMX2075");
             OverrideProperty("ro.product.product.device", "RMX2075L1");
+            OverrideProperty("ro.product.marketname", "realme X50 Pro");
             break;
         case 19706: // bladerunner IN
             OverrideProperty("ro.product.product.model", "RMX2076");
             OverrideProperty("ro.product.product.device", "RMX2076L1");
+            OverrideProperty("ro.product.marketname", "realme X50 Pro");
             break;
         case 21615: // rivena CN
             OverrideProperty("ro.product.product.model", "RMX3366");
             OverrideProperty("ro.product.product.device", "RE546F");
+            OverrideProperty("ro.product.marketname", "realme GT Master Exploratory");
             break;
         case 21619: // bitra CN
         case 136730: // bitra CN (Dragon Ball Edition)
             OverrideProperty("ro.product.product.model", "RMX3370");
             OverrideProperty("ro.product.product.device", "RE5473");
+            if (prjname == 21619) {
+                OverrideProperty("ro.product.marketname", "realme GT Neo2");
+            } else {
+                OverrideProperty("ro.product.marketname", "realme GT Neo2 Dragon Ball Edition");
+            }
             break;
         case 136858: // bitra IN
         case 136859: // bitra EU
             OverrideProperty("ro.product.product.model", "RMX3370");
             OverrideProperty("ro.product.product.device", "RE879AL1");
+            OverrideProperty("ro.product.marketname", "realme GT NEO 2");
             break;
         case 21623: // spartan CN
             OverrideProperty("ro.product.product.model", "RMX3372");
             OverrideProperty("ro.product.product.device", "RE5477");
+            OverrideProperty("ro.product.marketname", "realme Q5 Pro");
             break;
         case 21732: // spartan IN
         case 21733: // spartan EU
             OverrideProperty("ro.product.product.model", "RMX3371");
             OverrideProperty("ro.product.product.device", "RE54E4L1");
+            OverrideProperty("ro.product.marketname", "realme GT NEO 3T");
             break;
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
