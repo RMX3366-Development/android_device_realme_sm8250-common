@@ -650,9 +650,6 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
-odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_53:vendor/firmware/sn100u.bin
-
 # Osense
 odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensehalclient.so
