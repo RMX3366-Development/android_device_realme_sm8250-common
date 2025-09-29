@@ -38,7 +38,23 @@ void OverrideProperty(const char* name, const char* value) {
  * after the original property has been set.
  */
 void vendor_load_properties() {
-    auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
+    auto prjname_string = GetProperty("ro.boot.prjname", "0");
+    int prjname = 0;
+    char* end;
+    long val;
+
+    if (prjname_string.find_first_of("AB") != std::string::npos) { // for specific prjname string(2161A, 2169A, 2169B)
+        val = strtol(prjname_string.c_str(), &end, 16);
+    } else {
+        val = strtol(prjname_string.c_str(), &end, 10);
+    }
+
+    if (*end != '\0') {
+        LOG(ERROR) << "Invalid project name format: " << prjname_string;
+        return;
+    }
+
+    prjname = static_cast<int>(val);
 
     switch (prjname) {
         case 19795: // bladerunner CN
@@ -67,7 +83,7 @@ void vendor_load_properties() {
             OverrideProperty("ro.product.marketname", "realme GT Master Exploratory");
             break;
         case 21619: // bitra CN
-        case 136730: // bitra CN (Dragon Ball Edition)
+        case 0x2161A: // bitra CN (Dragon Ball Edition)
             OverrideProperty("ro.product.product.model", "RMX3370");
             OverrideProperty("ro.product.product.device", "RE5473");
             if (prjname == 21619) {
@@ -76,8 +92,8 @@ void vendor_load_properties() {
                 OverrideProperty("ro.product.marketname", "realme GT Neo2 Dragon Ball Edition");
             }
             break;
-        case 136858: // bitra IN
-        case 136859: // bitra EU
+        case 0x2169A: // bitra IN
+        case 0x2169B: // bitra EU
             OverrideProperty("ro.product.product.model", "RMX3370");
             OverrideProperty("ro.product.product.device", "RE879AL1");
             OverrideProperty("ro.product.marketname", "realme GT NEO 2");

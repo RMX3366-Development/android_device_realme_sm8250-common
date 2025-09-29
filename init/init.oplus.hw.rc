@@ -26,13 +26,13 @@ on property:ro.boot.prjname=21615
 on property:ro.boot.prjname=21619
     setprop ro.boot.hardware.revision "CN"
 
-on property:ro.boot.prjname=136730
+on property:ro.boot.prjname=2161A
     setprop ro.boot.hardware.revision "CN"
 
-on property:ro.boot.prjname=136859
+on property:ro.boot.prjname=2169B
     setprop ro.boot.hardware.revision "EU"
 
-on property:ro.boot.prjname=136858
+on property:ro.boot.prjname=2169A
     setprop ro.boot.hardware.revision "IN"
 
 # spartan
