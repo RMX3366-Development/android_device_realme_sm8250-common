@@ -97,7 +97,7 @@ blob_fixups: blob_fixups_user_type = {
     'odm/lib64/libpwirissoft.so': blob_fixup()
         .call(blob_fixup_nop_call, 'bl', '_ZN4pxlw18qcomSetDisplayModeEPvii', '_ZN4pxlw15irisSetConfigExEiiPKi@plt'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V1-ndk_platform.so', 'android.hardware.graphics.common-V6-ndk.so'),
+        .replace_needed('android.hardware.graphics.common-V1-ndk_platform.so', 'android.hardware.graphics.common-V7-ndk.so'),
     ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libaps_frame_registration.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'odm/lib64/libOGLManager.so': blob_fixup()
