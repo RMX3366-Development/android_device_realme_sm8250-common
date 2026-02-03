@@ -127,9 +127,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libinput_shim.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
-    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
-        .add_needed('libcamera_metadata_shim.so')
-        .binary_regex_replace(b'com.oem.autotest', b'\x00om.oem.autotest'),
     'vendor/lib64/libdpps.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/sensors.ssc.so': blob_fixup()
